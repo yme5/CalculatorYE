@@ -34,8 +34,8 @@ def squaring(a):
 
 def squareroot(a):
     a = float(a)
-    c = a ** .5
-    return c
+    c = a ** .50000
+    return round(c, 9)
 
 
 class Calculator:

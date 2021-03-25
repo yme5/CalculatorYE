@@ -47,12 +47,20 @@ class MyTestCase(unittest.TestCase):
         CsvReader('/src/division.csv').data.clear()
 
     def test_square_method_calculator(self):
-        self.assertEqual(self.calculator.square(3), 9)
-        self.assertEqual(self.calculator.result, 9)
+        test_data = CsvReader('/src/square.csv').data
+        for row in test_data:
+            result = float(row['Result'])
+            self.assertEqual(self.calculator.square(row['Value 1']), result)
+            self.assertEqual(self.calculator.result, result)
+        CsvReader('/src/square.csv').data.clear()
 
     def test_sqrt_method_calculator(self):
-        self.assertEqual(self.calculator.sqrt(9), 3)
-        self.assertEqual(self.calculator.result, 3)
+        test_data = CsvReader('/src/squareRoot.csv').data
+        for row in test_data:
+            result = float(row['Result'])
+            self.assertEqual(self.calculator.sqrt(row['Value 1']), result)
+            self.assertEqual(self.calculator.result, result)
+        CsvReader('/src/squareRoot.csv').data.clear()
 
 
 if __name__ == '__main__':
