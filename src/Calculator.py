@@ -1,5 +1,8 @@
 def addition(a, b):
-    return a + b
+    a = float(a)
+    b = float(b)
+    c = b + a
+    return c
 
 
 def subtraction(a, b):
@@ -8,20 +11,31 @@ def subtraction(a, b):
     c = b - a
     return c
 
+
 def multiplication(a, b):
-    return a * b
+    a = float(a)
+    b = float(b)
+    c = b * a
+    return c
 
 
 def division(a, b):
-    return a / b
+    a = float(a)
+    b = float(b)
+    c = b / a
+    return round(c,9)
 
 
 def squaring(a):
-    return a * a
+    a = float(a)
+    c = a * a
+    return c
 
 
 def squareroot(a):
-    return a ** .5
+    a = float(a)
+    c = a ** .5
+    return c
 
 
 class Calculator:
